@@ -1,0 +1,729 @@
+/* ------------------------------------------------------------ *\
+	reset
+\* ------------------------------------------------------------ */
+
+*{
+	padding:0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* ------------------------------------------------------------ *\
+	base
+\* ------------------------------------------------------------ */
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ------------------------------------------------------------ *\
+	btn-small
+\* ------------------------------------------------------------ */
+
+.btn-small {
+	color: white;
+	background: #ff880e;
+	border-radius: 20px;
+	border: none;
+	padding: 4px 40px;
+}
+
+/* ------------------------------------------------------------ *\
+	header
+\* ------------------------------------------------------------ */
+
+.header {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.header .header__logo {
+	display: flex;
+	justify-content: start;
+}
+
+.header .header__content {
+	display: flex;
+	justify-content: space-between;
+	padding:0 180px 0 180px;
+	align-items: center;
+	background: white;
+	width: 100%;
+}
+
+.header .header__aside {
+	display: flex;
+	gap: 50px;
+}
+
+.header .header__nav {
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+	background: #ff880e;
+	clip-path: polygon(37% 0, 100% 0%, 100% 100%, 40% 100%);
+  align-items: center;
+}
+
+/* ------------------------------------------------------------ *\
+	contacts
+\* ------------------------------------------------------------ */
+
+.contacts ul {
+	display: flex;
+	align-items: center;
+}
+
+.contacts ul li{
+	padding-left: 50px;
+}
+
+.contacts a {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* ------------------------------------------------------------ *\
+	nav
+\* ------------------------------------------------------------ */
+
+.nav {
+	width: 100%;
+  max-width: 70%;
+}
+
+.nav a {
+	color: black;
+}
+
+.nav li{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav li + li {
+	margin-left: 30px;
+}
+
+.nav ul {
+	text-align: center;
+	padding:15px;
+}
+
+.nav img {
+	vertical-align: middle;
+}
+
+/* ------------------------------------------------------------ *\
+	hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	position: relative;
+	min-height: 500px;
+	padding-top: 166px;
+	padding-bottom: 50px;
+	padding-left: 170px;
+}
+
+.hero .hero__content {
+	position: relative;
+}
+
+.hero .hero__background {
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+.hero .hero__background img {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+.hero .hero__content h1 {
+	font-size: 50px;
+  	font-family: "Myriad Pro";
+  	color: rgb(255, 255, 255);
+}
+
+.hero .hero__content p {
+	font-size: 150px;
+  font-family: "Myriad Pro";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+.hero .button__hero {
+	border: white;
+	padding: 10px;
+}
+
+/* ------------------------------------------------------------ *\
+	button
+\* ------------------------------------------------------------ */
+
+.button {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #fff;
+	font-family: helvetica;
+	background: transparent;
+	border:1px solid #fff;
+	border-color: white;
+	padding: 7px 15px;
+	display: inline-block;
+}
+
+.button:hover img {
+	transform: translateX(10px);
+}
+
+.button img {
+	vertical-align: middle;
+	margin-bottom: 3px;
+	margin-left: 5px;
+	width: 29px;
+	height: auto;
+	object-fit: contain;
+	transition: 0.3s;
+}
+
+.button--orange {
+	color: black;
+	border-color: #ff880e;
+}	
+ 
+.button:hover {
+	width: auto;
+	border: 1px solid #ff880e;
+	background-color: transparent;
+	box-shadow: 5px 5px 30px #ff880e;
+}
+
+/* ------------------------------------------------------------ *\
+	section
+\* ------------------------------------------------------------ */
+
+.section {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.section .section__content {
+	width: 30%;
+	padding-left: 20px;
+}
+
+.section h1 span,
+.section h2 span {
+	color: #ff880e;
+	font-weight: 400;
+}
+
+.section h1 {
+	font-weight: 400;
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+
+.section .section__button {
+	margin-top: 30px;
+}
+
+.section .section__image {
+	max-width: 50%;
+	margin-right: 15px; 
+}
+
+.section .section__image img {
+	width: 100%;
+	object-fit: cover;
+}
+ /* ------------------------------------------------------------ *\
+ 	has-decoration
+ \* ------------------------------------------------------------ */
+  
+.has-decoration:after {
+	content: '';
+	background: #ff880e;
+	width: 100px;
+	height: 5px;
+	display: block;
+	transform: skew(315deg);	
+}
+
+.has-decoration--centred:after {
+	margin: 0 auto;
+}
+
+/* ------------------------------------------------------------ *\
+	.section-cards
+\* ------------------------------------------------------------ */
+
+.section-cards .section__head {	
+	text-align: center;
+}
+
+.section-cards .section__body {
+	max-width: 85%;
+	margin: 20px auto 0;
+}
+
+/* ------------------------------------------------------------ *\
+	cards
+\* ------------------------------------------------------------ */
+
+.cards ul{	
+	display: flex;
+	gap: 20px;	
+}
+
+.cards li {
+	margin:0 auto; 
+	flex:0 0 calc(100% / 4 - 20px);
+}
+
+/* ------------------------------------------------------------ *\
+	card
+\* ------------------------------------------------------------ */
+
+.card {
+	box-shadow: 1px 0 6px rgba(2,3,8,0.42);
+	height: 100%;
+}
+
+.card .card__content {
+	padding: 20px 15px;
+}
+
+.card .card__image {
+	height: 200px;
+	overflow: hidden;	
+} 
+
+.card .card__image img {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	object-fit: cover;
+	transition: transform 0.3s;	
+}
+
+.card:hover h3{
+	transform: scale(1.1);
+}
+
+.card:hover img {
+	transform: scale(1.2);
+}
+
+.card .card__content h3 {
+  font-size: 20px;
+  font-family: "Myriad Pro";
+  color: rgb(3, 2, 0);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* ------------------------------------------------------------ *\
+	section-cards
+\* ------------------------------------------------------------ */
+
+.section-cards .section__actions {
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* ------------------------------------------------------------ *\
+	exchange
+\* ------------------------------------------------------------ */
+
+.exchange {
+	display: flex;	
+	margin-top: 80px;
+	position: relative;
+	isolation: isolate;
+}
+
+.exchange h2:after {
+	content: 'Fall 2019 applications are now open';
+	color: #ff880e;
+	display: block;
+	font-size: 14px;
+	margin-top: 4px;
+}
+
+.exchange:before {
+	content: "";
+	background: #2a2a2a;
+	display: block;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -2;	
+}
+
+.exchange .exchange__image {
+	max-width: 50%;
+	padding-right: 20px;
+}
+
+.exchange .exchange__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.exchange .exchange__content {
+	width: 30%;
+	margin-top: 50px;
+	margin-bottom: 25px;
+	color: white;
+	padding-left: 30px;
+}
+
+.exchange__content .button--orange {
+	background: white;
+	margin-top: 50px;
+}
+
+/* ------------------------------------------------------------ *\
+	about
+\* ------------------------------------------------------------ */
+
+.about {
+	display: flex;
+	margin-top: 50px;
+	position: relative;
+}
+
+.about .about__content {
+	width: 30%;
+	margin-left: 250px;
+	margin-right: 70px;
+}
+
+.about:before {
+	content: '';
+	background: url(images/polygon.png) no-repeat;
+	display: block;
+	height: 300px;
+	width: 150px;
+	background-size: contain;
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 200; 
+}
+
+.about:after {
+	content: '';
+	background: url(images/cube.png) no-repeat;
+	display: block;
+	height: 68px;
+	width: 68px;
+	background-size: contain;
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+	z-index: 200; 
+}
+
+.about .about__image {
+	max-width: 30%;
+	margin-right: 15px;
+}
+
+.about .about__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about .button {
+	margin-top: 30px;
+}
+
+/* ------------------------------------------------------------ *\
+	card-news 
+\* ------------------------------------------------------------ */
+
+.card-news {
+	position: relative;
+	min-height: 320px;
+	isolation: isolation;
+}
+
+.card-news:hover .card__text{
+	display: none;
+}
+
+.card-news:hover:before {
+	opacity: 1;
+}
+
+.card-news:hover .card__button {
+	display: revert;
+}
+
+.card-news:before {
+	content: '';
+	position: absolute;
+	background: rgb(0, 0, 0, .65);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.cards-news ul{	
+	display: flex;
+	position: relative;
+	margin: 20px 30px 0;
+}
+
+.cards-news ul li {
+	flex: 0 0 calc(100% / 3);
+	padding: 0 10px;
+}
+
+.card-news .card__image {
+	width: 100%; 
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.card-news .card__image img {
+	width: 100%; 
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-news .card__text {
+	position: absolute;
+	z-index: 1;
+	color: white;
+	background: #ff880e ;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding: 10px 30px;
+}
+
+.card-news .card__button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-color: white;
+	color: white;
+	min-width: 150px;
+	display: none;
+}
+
+.section-news .section__head h1 {	
+	text-align: center;
+	margin-top: 50px;
+}
+
+.card-news .card__text h3 {
+  font-size: 25px;
+  font-family: "Myriad Pro";
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/* ------------------------------------------------------------ *\
+	form
+\* ------------------------------------------------------------ */
+
+.form ul{
+	text-align: center;	
+	position: relative;	
+}
+
+.form li + li {
+	margin-top: 20px;
+}
+
+.form .form__input input,
+.form .form__input textarea {
+  background-color: black;
+  border-style: none;
+  color: white;
+  min-height: 50px;
+	padding-left: 20px;
+	width: 100%;
+}
+
+.form__input:last-child input{
+	height: 100px;
+}
+
+.form .form__actions {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.form .form__button {
+	text-transform: uppercase;
+	padding: 10px 40px;
+	border-style: none;
+}
+
+.form .form__input--textarea textarea {
+	height: 100px;
+	padding-top: 18px;
+	resize: none;
+}
+
+/* ------------------------------------------------------------ *\
+	section-forms
+\* ------------------------------------------------------------ */
+
+.section-forms {
+	margin-top: 50px;
+}
+
+.section-forms .section__background {
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.section-forms .section__background img {
+	object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.section-forms h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.section-forms .section__content {
+	position: relative;
+	padding: 50px 0 35px 0;
+}
+
+.section-forms .section__forms {
+	max-width: 50%;
+  margin: 0 auto;
+}
+
+.section-forms .section__actions {
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* ------------------------------------------------------------ *\
+	footer
+\* ------------------------------------------------------------ */
+
+.footer {
+	
+	background: #3a1e02;
+}
+
+.footer a {
+	color: white;
+	line-height: 30px;
+}
+
+.footer .footer__content {	
+	display: flex;
+	color: antiquewhite;
+	justify-content: space-between;
+	padding: 80px;
+}
+
+.footer .footer__column {
+	flex: 0 0 calc(100% / 4);
+}
+
+.footer .footer__column--size-1 {
+	flex-basis: 220px;
+}
+
+.footer__column--center {
+	align-self: center;
+}
+
+
+.footer .footer__logo {	
+	align-items: center;
+}
+	
+.footer h3 {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.footer .footer__title:after {
+	width: 120px;
+	transform: translate(0);
+}
+
+.footer .footer__contacts img {
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+}
+
+/* ------------------------------------------------------------ *\
+	subscribe
+\* ------------------------------------------------------------ */
+
+.subscribe input {
+	padding: 5px;
+	margin: 20px 0;
+}
+
+.subscribe .subscribe__btn {
+	padding: 7px 20px;
+	border-radius: 4px;
+	display: block;
+}
+
+/* ------------------------------------------------------------ *\
+	copyright
+\* ------------------------------------------------------------ */
+
+.copyright {
+	text-align: center;
+	color: white;
+	background: #532a02;
+	padding: 20px 0;
+}
